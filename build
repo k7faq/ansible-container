@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
 docker build -t ansible_2.7 .
 
 # configure bash_profile
-./run ansible-playbook configure.yml
+./run ansible-playbook configure_env.yml
