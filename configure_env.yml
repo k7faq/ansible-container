@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: Create alias in bash_profile
+    blockinfile:
+      create: yes
+      backup: yes
+      state: present
+      path: "~/.bash_profile"
+      block: |
+        "alias ansi=\"${PWD}/run\""
