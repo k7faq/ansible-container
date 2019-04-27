@@ -1,6 +1,1 @@
-#!/bin/bash
-docker run --rm -it \
-  -v $(pwd):/ansible/playbooks \
-  -v /home/rexec-svc/.ssh/id_rsa:/root/.ssh/id_rsa \
-  -v /home/rexec-svc/.ssh/id_rsa.pub:/root/.ssh/id_rsa.pub \
-  ansible_2.7 "$@" 
+docker run --rm -it -v ~/.ssh:/root/.ssh/ -v $(pwd):/ansible/playbooks ansible_2.7 "$@"
