@@ -49,7 +49,7 @@ localhost                  : ok=1    changed=1    unreachable=0    failed=0
 
 ### How do I use this?
 
-Following are some example use cases:
+This container configuration allows the user to specify the command they wish to execute against the installed and configuration application(s). Such as Ansible offers several executable commands, including `ansible` and `ansible-playbook`, etc. Following are two examples of how to use this container:
 
 ```
 ansi ansible-playbook configure_env.yml -vvvv
@@ -58,6 +58,10 @@ ansi ansible-playbook configure_env.yml -vvvv
 ```
 ansi ansible --version
 ```
+
+### Why does this container not have an ENTRYPONT or CMD?
+
+Ansible offers more than just one command (functional feature). Not specifying either of these features allows me to specify which command I want to execute without needing multiple containers. Yes, there may be other options, this is just that I have chosen.
 
 ### Some notes of interest
 
